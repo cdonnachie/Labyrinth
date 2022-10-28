@@ -1,0 +1,33 @@
+# /etc/conf.d/labyrinthd: config file for /etc/init.d/labyrinthd
+
+# Config file location
+#LABYRINTHD_CONFIGFILE="/etc/labyrinth/labyrinth.conf"
+
+# What directory to write pidfile to?  (created and owned by $LABYRINTHD_USER)
+#LABYRINTHD_PIDDIR="/var/run/labyrinthd"
+
+# What filename to give the pidfile
+#LABYRINTHD_PIDFILE="${LABYRINTHD_PIDDIR}/labyrinthd.pid"
+
+# Where to write labyrinthd data (be mindful that the blockchain is large)
+#LABYRINTHD_DATADIR="/var/lib/labyrinthd"
+
+# User and group to own labyrinthd process
+#LABYRINTHD_USER="labyrinth"
+#LABYRINTHD_GROUP="labyrinth"
+
+# Path to labyrinthd executable
+#LABYRINTHD_BIN="/usr/bin/labyrinthd"
+
+# Nice value to run labyrinthd under
+#LABYRINTHD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#LABYRINTHD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for labyrinthd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+LABYRINTHD_SIGTERM_TIMEOUT=600
