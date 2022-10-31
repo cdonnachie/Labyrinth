@@ -6,11 +6,8 @@ https://labyrinthcore.org
 What is Labyrinth?
 ----------------
 
-Labyrinth is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. Labyrinth uses peer-to-peer technology to operate
-with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Labyrinth Core is the name of open source
-software which enables the use of this currency.
+Labyrinth Core (LAB) is an open source, Bitcoin-derived digital currency which serves as the core of our escrow service.
+Labyrinth Escrow is the platform where multiple parties can transact between each other, under predefined conditions, without the need of trust. This is possible due to conditions being set and executed similar to smart contracts. The entire transaction validation happens on chain, rendering the usual escrow attacks impractical.
 
 License
 -------
@@ -52,25 +49,9 @@ There are also [regression and integration tests](/test), written
 in Python, that are run automatically on the build server.
 These tests can be run (if the [test dependencies](/test) are installed) with: `test/functional/test_runner.py`
 
-The Travis CI system makes sure that every pull request is built for Windows, Linux, and macOS, and that unit/sanity tests are run automatically.
-
 ### Manual Quality Assurance (QA) Testing
 
 Changes should be tested by somebody other than the developer who wrote the
 code. This is especially important for large or high-risk changes. It is useful
 to add a test plan to the pull request description if testing the changes is
 not straightforward.
-
-Translations
-------------
-
-Changes to translations as well as new translations can be submitted to
-[Labyrinth Core's Transifex page](https://www.transifex.com/labyrinth/labyrinth/).
-
-Translations are periodically pulled from Transifex and merged into the git repository. See the
-[translation process](doc/translation_process.md) for details on how this works.
-
-**Important**: We do not accept translation changes as GitHub pull requests because the next
-pull from Transifex would automatically overwrite them again.
-
-Translators should also subscribe to the [mailing list](https://groups.google.com/forum/#!forum/labyrinth-translators).
