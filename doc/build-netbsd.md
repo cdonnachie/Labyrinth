@@ -22,7 +22,7 @@ libtool
 pkg-config
 python37
 
-git clone https://github.com/labyrinth/labyrinth.git
+git clone https://github.com/LabyrinthCore/Labyrinth.git
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.
