@@ -3,10 +3,10 @@ Labyrinth Core
 
 Intro
 -----
-Labyrinth is a free open source peer-to-peer electronic cash system that is
-completely decentralized, without the need for a central server or trusted
-parties.  Users hold the crypto keys to their own money and transact directly
-with each other, with the help of a P2P network to check for double-spending.
+Labyrinth Core (LAB) is an open source, Bitcoin-derived digital currency which serves as the core of our escrow service.
+Labyrinth Escrow is the platform where multiple parties can transact between each other, under predefined conditions,
+without the need of trust. This is possible due to conditions being set and executed similar to smart contracts.
+The entire transaction validation happens on chain, rendering the usual escrow attacks impractical.
 
 
 Setup
