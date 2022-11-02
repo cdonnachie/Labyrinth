@@ -6,7 +6,7 @@ https://labyrinthcore.org
 What is Labyrinth?
 ----------------
 
-Labyrinth Core (LAB) is an open-source, Bitcoin derived digital currency that serves as the core of our escrow service.
+Labyrinth Core (LAB) is an open-source, Bitcoin-derived digital currency that serves as the core of our escrow service.
 Labyrinth Escrow is a platform where multiple parties can transact with each other, under predefined conditions, without the need for trust. This is possible due to conditions being set and executed similarly to smart contracts. The entire transaction validation happens on the chain, rendering the usual escrow attacks impractical.
 
 License
