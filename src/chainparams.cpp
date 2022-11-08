@@ -93,8 +93,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].min_activation_height = 0;
 
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000004e8ffb1dde5ef");
-        consensus.defaultAssumeValid = uint256S("0x00000000002a92c651cf3685065a630397bcd756b8db417e09212edfce17e71b");
+        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000001a8f78ab4e3dcf");
+        consensus.defaultAssumeValid = uint256S("0x00000000002d7aff15bc1869549cfe28d0c535afcb25fccec2f689c589fcc899");
 
         consensus.founderPercentage = 10;
         consensus.founderOutputHex = {0x76,0xa9,0x14,0x5e,0xe3,0x50,0xcb,0xff,0x1f,0xba,0x6c,0x00,0x4b,0x25,0xde,0x65,0xf5,0x37,0x54,0x47,0x00,0xee,0x7b,0x88,0xac};
@@ -147,14 +147,16 @@ public:
                 {50, uint256S("0x000000a913e56fb01bba5119f9def39a6142ad35f82c382354247356652956db")},
                 {100, uint256S("0x0000001033ca34c70b18482454c66e1733c57a23ea7a253034ff5b48920d9e4a")},
                 {400, uint256S("0x0000000000166a9b4d318fcb7b8726c00a4ed01462ae836e9cec835770a8dfca")},
-                {800, uint256S("0x00000000002a92c651cf3685065a630397bcd756b8db417e09212edfce17e71b")}
+                {800, uint256S("0x00000000002a92c651cf3685065a630397bcd756b8db417e09212edfce17e71b")},
+                {1600, uint256S("0x0000000000508be6aebc64952859107e5ff319180af0d9e24107a14216b910c7")},
+                {2700, uint256S("0x00000000002d7aff15bc1869549cfe28d0c535afcb25fccec2f689c589fcc899")}
             }
         };
 
         chainTxData = ChainTxData{
-            1667775168,
-            872,
-            0.02192595579525694
+            1667896160,
+            2969,
+            0.01849381669492371
         };
     }
 };
