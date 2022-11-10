@@ -117,18 +117,20 @@ void AskPassphraseDialog::accept()
             break;
         }
         QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm wallet encryption"),
-                 tr("Warning: If you forget your passphrase, you will <b>LOSE ALL OF YOUR LABYRINTH COINS</b>!") + "<br><br>" + tr("Are you sure you have remembered/backed up you passphrase?"),
+                 tr("Warning: If you encrypt your wallet and lose your passphrase, you will <b>LOSE ALL OF YOUR LABYRINTHS</b>!") + "<br><br>" + tr("Are you sure you wish to encrypt your wallet?"),
                  QMessageBox::Yes|QMessageBox::Cancel,
                  QMessageBox::Cancel);
         if(retval == QMessageBox::Yes)
         {
             if(newpass1 == newpass2)
             {
+                QString encryption_reminder = tr("Remember that encrypting your wallet cannot fully protect "
+                "your labyrinths from being stolen by malware infecting your computer.");
                 if (m_passphrase_out) {
                     m_passphrase_out->assign(newpass1);
                     QMessageBox::warning(this, tr("Wallet to be encrypted"),
                                          "<qt>" +
-                                         tr("Your wallet is about to be encrypted. ") +
+                                         tr("Your wallet is about to be encrypted. ") + encryption_reminder +
                                          "</b></qt>");
                 } else {
                     assert(model != nullptr);
@@ -136,7 +138,7 @@ void AskPassphraseDialog::accept()
                     {
                         QMessageBox::warning(this, tr("Wallet encrypted"),
                                              "<qt>" +
-                                             tr("Your wallet is now encrypted. ") +
+                                             tr("Your wallet is now encrypted. ") + encryption_reminder +
                                              "<br><br><b>" +
                                              tr("IMPORTANT: Any previous backups you have made of your wallet file "
                                              "should be replaced with the newly generated, encrypted wallet file. "

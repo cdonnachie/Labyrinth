@@ -5,7 +5,6 @@
 
 #include <qt/labyrinthgui.h>
 
-#include <qt/askpassphrasedialog.h>
 #include <qt/labyrinthunits.h>
 #include <qt/clientmodel.h>
 #include <qt/createwalletdialog.h>
@@ -719,28 +718,7 @@ void LabyrinthGUI::setCurrentWallet(WalletModel* wallet_model)
 void LabyrinthGUI::setCurrentWalletBySelectorIndex(int index)
 {
     WalletModel* wallet_model = m_wallet_selector->itemData(index).value<WalletModel*>();
-    if (wallet_model) {
-        setCurrentWallet(wallet_model);
-
-        if (wallet_model->getEncryptionStatus() == WalletModel::Unencrypted && !m_node.shutdownRequested()) {
-
-            AskPassphraseDialog* m_passphrase_dialog = new AskPassphraseDialog(AskPassphraseDialog::Encrypt, walletFrame);
-            
-            m_passphrase_dialog->setModel(wallet_model);
-            m_passphrase_dialog->setWindowModality(Qt::ApplicationModal);
-            m_passphrase_dialog->show();
-
-            connect(m_passphrase_dialog, &QObject::destroyed, [this] {
-                QApplication::quit();
-            });
-            connect(m_passphrase_dialog, &QDialog::accepted, [this] {
-                return;
-            });
-            connect(m_passphrase_dialog, &QDialog::rejected, [this] {
-                QApplication::quit();
-            });
-        }
-    }
+    if (wallet_model) setCurrentWallet(wallet_model);
 }
 
 void LabyrinthGUI::removeAllWallets()
