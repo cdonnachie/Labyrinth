@@ -290,11 +290,7 @@ void CreateWalletActivity::create()
         Q_EMIT finished();
     });
     connect(m_create_wallet_dialog, &QDialog::accepted, [this] {
-        if (m_create_wallet_dialog->isEncryptWalletChecked()) {
-            askPassphrase();
-        } else {
-            createWallet();
-        }
+        createWallet();
     });
 }
 
