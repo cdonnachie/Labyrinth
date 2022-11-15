@@ -1,7 +1,7 @@
 Labyrinth Core integration/staging tree
 =====================================
 
-https://labyrinthcore.org
+https://labyrinthcore.com
 
 What is Labyrinth?
 ----------------

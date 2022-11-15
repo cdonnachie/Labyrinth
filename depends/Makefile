@@ -38,7 +38,7 @@ NO_WALLET ?=
 NO_ZMQ ?=
 NO_UPNP ?=
 MULTIPROCESS ?=
-FALLBACK_DOWNLOAD_PATH ?= https://labyrinthcore.org/depends-sources
+FALLBACK_DOWNLOAD_PATH ?= https://labyrinthcore.com/depends-sources
 
 BUILD = $(shell ./config.guess)
 HOST ?= $(BUILD)

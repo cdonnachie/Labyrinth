@@ -92,10 +92,10 @@ bool static TestSplitHost(std::string test, std::string host, int port)
 
 BOOST_AUTO_TEST_CASE(netbase_splithost)
 {
-    BOOST_CHECK(TestSplitHost("www.labyrinthcore.org", "www.labyrinthcore.org", -1));
-    BOOST_CHECK(TestSplitHost("[www.labyrinthcore.org]", "www.labyrinthcore.org", -1));
-    BOOST_CHECK(TestSplitHost("www.labyrinthcore.org:80", "www.labyrinthcore.org", 80));
-    BOOST_CHECK(TestSplitHost("[www.labyrinthcore.org]:80", "www.labyrinthcore.org", 80));
+    BOOST_CHECK(TestSplitHost("www.labyrinthcore.com", "www.labyrinthcore.com", -1));
+    BOOST_CHECK(TestSplitHost("[www.labyrinthcore.com]", "www.labyrinthcore.com", -1));
+    BOOST_CHECK(TestSplitHost("www.labyrinthcore.com:80", "www.labyrinthcore.com", 80));
+    BOOST_CHECK(TestSplitHost("[www.labyrinthcore.com]:80", "www.labyrinthcore.com", 80));
     BOOST_CHECK(TestSplitHost("127.0.0.1", "127.0.0.1", -1));
     BOOST_CHECK(TestSplitHost("127.0.0.1:8333", "127.0.0.1", 8333));
     BOOST_CHECK(TestSplitHost("[127.0.0.1]", "127.0.0.1", -1));

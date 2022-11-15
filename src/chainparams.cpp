@@ -122,8 +122,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0xb5cfc9a2963397f55992c7465f4b44961c2ab8b44ea7c8d2608c3e1ad417dfc1"));
         assert(genesis.mix_hash == uint256S("0xfce0ae9233d6ff6c4930784749395684e29c3257d1b72f9e9824ab680ccf5d0d"));
 
-        vSeeds.emplace_back("dns-primary-mainnet.labyrinthcore.org");
-        vSeeds.emplace_back("dns-secondary-mainnet.labyrinthcore.org");
+        vSeeds.emplace_back("dns-primary-mainnet.labyrinthcore.com");
+        vSeeds.emplace_back("dns-secondary-mainnet.labyrinthcore.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,76);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,26);
@@ -222,8 +222,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        vSeeds.emplace_back("dns-primary-testnet.labyrinthcore.org");
-        vSeeds.emplace_back("dns-secondary-testnet.labyrinthcore.org");
+        vSeeds.emplace_back("dns-primary-testnet.labyrinthcore.com");
+        vSeeds.emplace_back("dns-secondary-testnet.labyrinthcore.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,66);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,53);
